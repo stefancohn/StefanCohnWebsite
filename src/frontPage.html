@@ -70,43 +70,19 @@
 
 <!-- javascript -->
 <script>
-	//our scroll animation to go to about page 
-	function smoothScroll(target, duration) {
-		var target = document.querySelector(target);
-		//will add any padding to target so its proper
-		var targetPos = target.getBoundingClientRect().top + parseInt(getComputedStyle(target).getPropertyValue('padding-top'));
-		var startPos = pageYOffset;
-		var distance = targetPos - startPos;
-		var startTime = null;
-		console.log(distance);
-
-		//supplement smoothScroll to get animation 60 FPS
-		function animation(currentTime) {
-			//set our startTime
-			if (startTime === null) startTime = currentTime;
-			var timeElapsed = currentTime - startTime; 
-			var run = ease(timeElapsed, startPos, distance, duration);
-			window.scrollTo(0, run);
-
-			if(timeElapsed < duration) requestAnimationFrame(animation);
-		}
-
-		//math needed for actual animation 
-		function ease(t, b, c, d) {
-    		t /= d / 2;
-			if (t < 1) return c /2 * t * t + b;
-			t--;
-			return -c / 2 * (t * (t-2) - 1) + b;
-		}
-
-		requestAnimationFrame(animation);
-	}
-
-	// get about hyperlink into var
-	var aboutHL = document.querySelector('.navbar a[href="#about"]');
-	//now add clickListener so that when its clicked the smoothScroll funct gets called
-	aboutHL.addEventListener('click', function() {
-		smoothScroll('#about', 1000);
-	});
-
+	//grab our navbar 
+	var navbarAbt = document.querySelector('.navbar a[href="#about"]');
+	//add event listern
+	navbarAbt.addEventListener('click', function(e) {
+		//override html behavior with this, prevent its defualt funct
+		e.preventDefault();
+		//grab our target, the href 
+		var target = this.getAttribute("href");
+		document.querySelector(target).scrollIntoView({
+			//make the scroll smooth and scroll to the end 
+			behavior : "smooth",
+			block : "end",
+			duraction : 3000
+		})
+	})
 </script>
