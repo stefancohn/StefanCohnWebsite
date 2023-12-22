@@ -1,0 +1,5 @@
+/* define our custom font which can be found in asset */
+@font-face {
+    font-family : 'Pixel Font';
+    src: url(../assets/slkscr.ttf) format('truetype')
+}
