@@ -7,7 +7,7 @@
 	<title> stefan cohn </title>
 
 	<!-- link to pixelFont file so custom font can be used -->
-	<link rel="stylesheet" type="text/css" href="pixelFont.css">
+	<link rel="stylesheet" type="text/css" href="fonts.css">
 </head>
 
 <body>
@@ -35,13 +35,14 @@
 
 <!-- CSS stylization -->
 <style>
-	/* html page and body sect stylization */
-	body, html {
-		/* makes the height of elements within the page
-		   100% of the viewport and sets no margin */
-		height: 100%;
+
+	/*body and html sect stylization */
+	html, body {
+		/* no margin, sets the font, and background color*/
 		margin: 0;
-		font-family: 'Pixel Font';
+		font-family: 'Rainy Hearts';
+		background: linear-gradient(to bottom, rgb(90, 101, 255), rgb(93, 160, 248));
+		background-color: rgb(93, 160, 248);
 	}
 
 	/* center container stylization */
@@ -57,12 +58,17 @@
 
 	/* name text stylization */
 	.name {
-		font-size: 40px;
+		font-size: 50px;
 		margin: 10px;
+		color: rgb(174, 174, 174);
 	}
 
 	/* navbar stylization */
-	.navbar {
+	.navbar a{
+		text-decoration : none;
+		font-size: 20px;
+		font-style: italic;
+		color: white;
 	}
 
 	/* about section stylization */

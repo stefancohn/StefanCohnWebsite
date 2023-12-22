@@ -3,3 +3,8 @@
     font-family : 'Pixel Font';
     src: url(../assets/slkscr.ttf) format('truetype')
 }
+
+@font-face {
+    font-family : 'Rainy Hearts';
+    src: url(../assets/rainyhearts.ttf) format('truetype')
+}
