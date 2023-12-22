@@ -1,0 +1,112 @@
+'<!DOCTYPE html>
+
+<!-- HTML blue print -->
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+	<title> stefan cohn </title>
+</head>
+
+<body>
+	<!-- center container --> 
+	<div class = "center container">
+
+		<!-- name text --> 
+		<p class="name">stefan cohn</p>
+
+		<!-- nav bar -->
+		<nav class = "navbar">
+			<!-- our two elements -->
+			<a href="#about">about</a>
+			<a href="#">game</a>
+			<a href="#">discussion</a>
+		</nav>
+	</div>
+
+	<!-- about section -->
+	<section id = "about">
+		<h1>about me</h1>
+	</section>
+
+</body>
+
+<!-- CSS stylization -->
+<style>
+	/* html page and body sect stylization */
+	body, html {
+		/* makes the height of elements within the page
+		   100% of the viewport and sets no margin */
+		height: 100%;
+		margin: 0;
+	}
+
+	/* center container stylization */
+	.center { 
+		/* make it a flex box, stack its elements
+		   in a column, centers everything horz and vert */
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* centers vertically */
+		align-items: center; /*centers horizontally */
+		height: 100vh;
+	}
+
+	/* name text stylization */
+	.name {
+		font-size: 40px;
+		margin: 10px;
+	}
+
+	/* navbar stylization */
+	.navbar {
+	}
+
+	/* about section stylization */
+	#about {
+		height: 100%;
+		padding-top: 20%;
+	}
+</style> 
+
+<!-- javascript -->
+<script>
+	//our scroll animation to go to about page 
+	function smoothScroll(target, duration) {
+		var target = document.querySelector(target);
+		//will add any padding to target so its proper
+		var targetPos = target.getBoundingClientRect().top + parseInt(getComputedStyle(target).getPropertyValue('padding-top'));
+		var startPos = pageYOffset;
+		var distance = targetPos - startPos;
+		var startTime = null;
+		console.log(distance);
+
+		//supplement smoothScroll to get animation 60 FPS
+		function animation(currentTime) {
+			//set our startTime
+			if (startTime === null) startTime = currentTime;
+			var timeElapsed = currentTime - startTime; 
+			var run = ease(timeElapsed, startPos, distance, duration);
+			window.scrollTo(0, run);
+
+			if(timeElapsed < duration) requestAnimationFrame(animation);
+		}
+
+		//math needed for actual animation 
+		function ease(t, b, c, d) {
+    		t /= d / 2;
+			if (t < 1) return c /2 * t * t + b;
+			t--;
+			return -c / 2 * (t * (t-2) - 1) + b;
+		}
+
+		requestAnimationFrame(animation);
+	}
+
+	// get about hyperlink into var
+	var aboutHL = document.querySelector('.navbar a[href="#about"]');
+	//now add clickListener so that when its clicked the smoothScroll funct gets called
+	aboutHL.addEventListener('click', function() {
+		smoothScroll('#about', 1000);
+	});
+
+</script>
