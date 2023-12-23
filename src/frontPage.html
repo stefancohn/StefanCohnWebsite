@@ -23,16 +23,37 @@
 		<!-- nav bar -->
 		<nav class = "navbar">
 			<!-- our two elements -->
-			<a href="#about">about</a>
-			<a href="#">game</a>
+			<a href="#about">about | </a>
+			<a href="#projects">projects | </a>
+			<a href="#contactMe">contact me | </a>
+			<a href="#">game | </a>
 			<a href="#">discussion</a>
 		</nav>
 	</div>
 
 	<!-- about section -->
 	<section id = "about">
+		<!-- this span tag allows us to containerize our text and the text only-->
+		<h1><span>about me</span></h1>
+
+		<!-- container for our text -->
 		<div class = "textContainer">
-			<h1>about me</h1>
+			<p><span>hello! i am an aspiring software engineer from atlanta, ga. currently, i attend george washington university
+			where i am pursuing a bachelor of science in computer science.</span></p>
+		</div>
+	</section>
+
+	<!-- project section -->
+	<section id = "projects">
+		<div class = "textContainer">
+			<h1>projects</h1>
+		</div>
+	</section>
+
+	<!-- contact me section -->
+	<section id = "contactMe">
+		<div class = "textContainer">
+			<h1>contact me</h1>
 		</div>
 	</section>
 
@@ -40,18 +61,29 @@
 
 <!-- javascript -->
 <script>
-	//grab our navbar 
-	var navbarAbt = document.querySelector('.navbar a[href="#about"]');
-	//add event listern
-	navbarAbt.addEventListener('click', function(e) {
-		//override html behavior with this, prevent its defualt funct
-		e.preventDefault();
-		//grab our target, the href 
-		var target = this.getAttribute("href");
-		document.querySelector(target).scrollIntoView({
-			//make the scroll smooth and scroll to the end 
-			behavior : "smooth",
-			block : "end",
+	//grab our navbar items that have links to somewhere else in page
+	let navbarElementsArray = [
+    	document.querySelector('.navbar a[href="#about"]'),
+    	document.querySelector('.navbar a[href="#projects"]'),
+    	document.querySelector('.navbar a[href="#contactMe"]') 
+	];
+	
+	// Add scroll to elements in navbarArray
+	navbarElementsArray.forEach(addScroll);
+
+	//function that adds scroll to certain in page
+	function addScroll(docQ) {
+		//add event listern
+		docQ.addEventListener('click', function(e) {
+			//override html behavior with this, prevent its defualt funct
+			e.preventDefault();
+			//grab our target, the href 
+			var target = this.getAttribute("href");
+			document.querySelector(target).scrollIntoView({
+				//make the scroll smooth and scroll to the end 
+				behavior : "smooth",
+				block : "end",
+			})
 		})
-	})
+	}
 </script>

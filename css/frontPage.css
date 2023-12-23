@@ -37,17 +37,37 @@ html, body {
 /* about section stylization */
 #about {
     height: 100%;
-    padding-top: 10%;
-    padding-left: 10%;
-}
-
-#about .textContainer {
-    width: 50vh;
-    height: 40vh;
-    background-color: rgba(211, 64, 64, 0.3);
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 /* about header stylization */
-#about h1 {
+#about h1 span{
     color: white;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 1vh;
+}
+
+#about .textContainer {
+    width: 60%;
+    height: 55%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1vh;
+}
+
+#about .textContainer p span{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/*project section stylization */
+#projects {
+    height: 100%;
+    padding-left: 5%;
+}
+
+/* contact me section stylization */
+#contactMe {
+    height: 100%;
+    padding-left: 5%;
 }
