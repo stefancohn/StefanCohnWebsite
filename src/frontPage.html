@@ -7,7 +7,10 @@
 	<title> stefan cohn </title>
 
 	<!-- link to pixelFont file so custom font can be used -->
-	<link rel="stylesheet" type="text/css" href="fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+
+	<!-- link to CSS for frontPage-->
+	<link rel="stylesheet" type="text/css" href="../css/frontPage.css">
 </head>
 
 <body>
@@ -28,55 +31,12 @@
 
 	<!-- about section -->
 	<section id = "about">
-		<h1>about me</h1>
+		<div class = "textContainer">
+			<h1>about me</h1>
+		</div>
 	</section>
 
 </body>
-
-<!-- CSS stylization -->
-<style>
-
-	/*body and html sect stylization */
-	html, body {
-		/* no margin, sets the font, and background color*/
-		margin: 0;
-		font-family: 'Rainy Hearts';
-		background: linear-gradient(to bottom, rgb(90, 101, 255), rgb(93, 160, 248));
-		background-color: rgb(93, 160, 248);
-	}
-
-	/* center container stylization */
-	.center { 
-		/* make it a flex box, stack its elements
-		   in a column, centers everything horz and vert */
-		display: flex;
-		flex-direction: column;
-		justify-content: center; /* centers vertically */
-		align-items: center; /*centers horizontally */
-		height: 100vh;
-	}
-
-	/* name text stylization */
-	.name {
-		font-size: 50px;
-		margin: 10px;
-		color: rgb(174, 174, 174);
-	}
-
-	/* navbar stylization */
-	.navbar a{
-		text-decoration : none;
-		font-size: 20px;
-		font-style: italic;
-		color: white;
-	}
-
-	/* about section stylization */
-	#about {
-		height: 100%;
-		padding-top: 20%;
-	}
-</style> 
 
 <!-- javascript -->
 <script>
