@@ -7,7 +7,7 @@ html, body {
     background-color: rgb(93, 160, 248);
 }
 
-/* center container stylization */
+/*------- center container stylization, contains name and navbar --------*/
 .center { 
     /* make it a flex box, stack its elements
     in a column, centers everything horz and vert */
@@ -18,31 +18,46 @@ html, body {
     height: 100vh;
 }
 
-/* name text stylization */
 .name {
+    /* name text stylization */
     font-size: 50px;
     margin: 10px;
     color: rgb(174, 174, 174);
     font-weight: bold;
 }
 
-/* navbar stylization */
 .navbar a{
+    /* navbar stylization */
     text-decoration : none;
     font-size: 20px;
     font-style: italic;
     color: white;
 }
+/*-------------------------------------------
 
-/* about section stylization */
+------- about section stylization -------*/
 #about {
-    height: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    height: 100vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
 }
 
-/* about header stylization */
-#about h1 span{
+/*about container row*/
+#about .aboutContainer{
+    display: flex;
+    height:40%;
+    justify-content: left;
+    column-gap: 2vw;
+}
+
+#about .aboutContainer .aboutText p{
+    color: white;
+    font-size: 3vw;
+    margin-top: -1vw;
+}
+
+#about .aboutContainer .aboutText h1 span{
     color: white;
     background-color: rgb(255, 255, 255, 0.15);
     border-radius: 1vh;
@@ -50,27 +65,34 @@ html, body {
     font-size: 5.5vh;
 }
 
-/* text container stylization */
-#about .textContainer {
+#about .line {
     width: 100%;
-    height: 99vh;
-    border-radius: 1vh;
-    margin-top: -2vh;
+    height: 2px;
+    background-color: rgb(255, 255, 255, 0.15);
+    margin-top: 5%;
 }
 
-/* paragraph in text container stylization */
-#about .textContainer p{
+#about .aboutTabs {
+    display: flex;
+    margin-top: -1vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .aboutTabs .tabLinks {
+    margin-right: 5vw;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    font-weight: 1000;
+    cursor:pointer;
     color: white;
-    font-size: 1.6vw;
-    width: 100%
+    font-size: 4vw;
 }
 
-#about .textContainer img.duckFace {
-    width: 40%;
-    height: auto;
-    float:right;
-}
 
+/*-------end of about section sylization
+----------------------------------------
 /*project section stylization */
 #projects {
     height: 100%;
