@@ -47,24 +47,35 @@ html, body {
     background-color: rgb(255, 255, 255, 0.15);
     border-radius: 1vh;
     text-decoration: underline;
-    font-size: 36px;
+    font-size: 5.5vh;
 }
 
+/* text container stylization */
 #about .textContainer {
-    width: 60%;
-    height: 55%;
+    width: 100%;
+    height: 99vh;
     border-radius: 1vh;
-    margin-top: -1.1%;
+    margin-top: -2vh;
 }
 
+/* paragraph in text container stylization */
 #about .textContainer p{
     color: white;
+    font-size: 1.6vw;
+    width: 100%
+}
+
+#about .textContainer img.duckFace {
+    width: 40%;
+    height: auto;
+    float:right;
 }
 
 /*project section stylization */
 #projects {
     height: 100%;
     padding-left: 5%;
+    padding-top: 5%;
 }
 
 /* contact me section stylization */
