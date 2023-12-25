@@ -35,10 +35,12 @@
 	<section id = "about">
 		<div class = "aboutContainer">
 
-				<img src="../assets/duckFace.png" width="40%" height="auto">
+			<!--duck face image-->
+			<img src="../assets/duckFace.png" class = "duckFace">
 
+			<!--contains about text and header-->
 			<div style="width: 100%;" class = "aboutText"> 
-				<h1 style="margin-top:0"><span>about me</span></h1>
+				<h1 style="margin-top:2%;"><span>about me</span></h1>
 				<p>i am an aspiring software engineer from atlanta, ga. currently, i attend george washington university in washington d.c. 
 				where i am pursuing a bachelor of science in computer science. asides from coding, my passions are video games, 
 				weight lifting, and sports! i hope one day to become a game dev :D</p>
@@ -46,14 +48,41 @@
 
 		</div>
 
+		<!--a line across the page-->
 		<div class="line"></div>
-		
+
+		<!--the tabs that can be selected for more info-->
 		<div class = "aboutTabs">
 			<p class="tabLinks">Skills</p>
 			<p class="tabLinks">Experience</p>
 			<p class="tabLinks">Education</p>
 		</div>
 
+		<!--skills tab-->
+		<div class = "tabContent">
+			<ul>
+				<li><span>Java & Java Swing</span><br>Game Development & NLP</li>
+				<li><span>HTML & CSS & JavaScript</span><br>Front-End Web Development</li>
+				<li><span>MongoDB & NoSQL</span><br>Back-End Web Development Using Python</li>
+			</ul>
+		</div>
+
+		<!--experience tab-->
+		<div class = "tabContent">
+			<ul>
+				<li><span>DecisionDeskHQ</span><br>Data Entry</li>
+				<li><span>DMV_Serotonin</span><br>Club Promoter<br>Social Media Manager</li>
+			</ul>
+		</div>
+
+		<!--education tab-->
+		<div class = "tabContent">
+			<ul>
+				<li><span>Northview High School</span><br>Johns Creek, GA<br>2022 Graduate</li>
+				<li><span>George Washington University</span><br>Washington, D.C.
+					<br>B.S. in Computer Science<br>Expected 2026 Graduate</li>
+			</ul>
+		</div>
 	</section>
 
 	<!-- project section -->
@@ -74,6 +103,7 @@
 
 <!-- javascript -->
 <script>
+	//----------- click on nav bar to scroll func ------------
 	//grab our navbar items that have links to somewhere else in page
 	let navbarElementsArray = [
     	document.querySelector('.navbar a[href="#about"]'),
@@ -99,4 +129,7 @@
 			})
 		})
 	}
+
+	//---------make about section texts pop out when clicked-------------
+
 </script>

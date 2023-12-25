@@ -22,7 +22,7 @@ html, body {
     /* name text stylization */
     font-size: 50px;
     margin: 10px;
-    color: rgb(174, 174, 174);
+    color: rgb(137, 224, 255);
     font-weight: bold;
 }
 
@@ -53,16 +53,22 @@ html, body {
 
 #about .aboutContainer .aboutText p{
     color: white;
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin-top: -1vw;
 }
 
 #about .aboutContainer .aboutText h1 span{
-    color: white;
+    color: rgb(137, 224, 255);
     background-color: rgb(255, 255, 255, 0.15);
     border-radius: 1vh;
     text-decoration: underline;
-    font-size: 5.5vh;
+    font-size: 5.5vw;
+}
+
+#about .aboutContainer .duckFace {
+    width:"40%"; 
+    height:"auto";
+    margin-top: 2%;
 }
 
 #about .line {
@@ -74,22 +80,36 @@ html, body {
 
 #about .aboutTabs {
     display: flex;
-    margin-top: -1vh;
+    margin-top: 1vh;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: baseline;
+    justify-content: space-evenly;
+    
 }
 
 #about .aboutTabs .tabLinks {
     margin-right: 5vw;
     margin-left: 1vw;
     margin-top: 3vh;
+    margin-bottom: 0;
     font-weight: 1000;
     cursor:pointer;
     color: white;
     font-size: 4vw;
+    position: relative;
 }
 
+#about .aboutTabs .tabLinks::after {
+    content:"";
+    background-color: white;
+    position: absolute;
+    width: 85%;
+    left: 0;
+    bottom: -0.5vh;
+    height: 2px;
+    background-color: white;
+    transition: 0.5s;
+}
 
 /*-------end of about section sylization
 ----------------------------------------
