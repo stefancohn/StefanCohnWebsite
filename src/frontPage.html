@@ -1,8 +1,8 @@
-'<!DOCTYPE html>
+<!DOCTYPE html>
+<meta charset="UTF-8">
 
 <!-- HTML blue print -->
 <head>
-	<meta charset="UTF-8">
 	<meta name = "viewport" content ="width=device-width, initial-scale=1.0">
 	<title> stefan cohn </title>
 
@@ -39,8 +39,8 @@
 			<img src="../assets/duckFace.png" class = "duckFace">
 
 			<!--contains about text and header-->
-			<div style="width: 100%;" class = "aboutText"> 
-				<h1 style="margin-top:2%;"><span>about me</span></h1>
+			<div style="width: 100%; height: 100%;" class = "aboutText"> 
+				<h1 style="margin-top:-1vh;"><span>about me</span></h1>
 				<p>i am an aspiring software engineer from atlanta, ga. currently, i attend george washington university in washington d.c. 
 				where i am pursuing a bachelor of science in computer science. asides from coding, my passions are video games, 
 				weight lifting, and sports! i hope one day to become a game dev :D</p>
@@ -61,9 +61,9 @@
 		<!--skills tab-->
 		<div class = "tabContent" id="skills">
 			<ul>
-				<li class="text"><span>Java & Java Swing</span><br>Game Development & NLP</li>
-				<li class="text"><span>HTML & CSS & JavaScript</span><br>Front-End Web Development</li>
-				<li class="text"><span>MongoDB & NoSQL</span><br>Back-End Web Development Using Python</li>
+				<li><span>Java & Java Swing</span><br>Game Development & NLP</li>
+				<li><span>HTML & CSS & JavaScript</span><br>Front-End Web Development</li>
+				<li><span>MongoDB & NoSQL</span><br>Back-End Web Development Using Python</li>
 			</ul>
 		</div>
 
@@ -87,8 +87,13 @@
 
 	<!-- project section -->
 	<section id = "projects">
-		<div class = "textContainer">
+
+		<div class = "headerContainer">
 			<h1>projects</h1>
+		</div>
+
+		<div class="sideBar">
+			<p>BAHA</p>
 		</div>
 	</section>
 
@@ -131,9 +136,15 @@
 	var tabContents = document.querySelectorAll('.tabContent');
 
 	function openTab(tabName) {
+		//check if button is already clicked
+		var alreadyClicked = (document.querySelector(tabName).classList[1] == "active");
+
 		tabLinks.forEach(link => link.classList.remove("active"));
 		tabContents.forEach(content => content.classList.remove("active"))
-		event.currentTarget.classList.add("active");
-		document.querySelector(tabName).classList.add("active");
+		//if not already clicked, we display underline and text
+		if (!alreadyClicked) {
+			event.currentTarget.classList.add("active");
+			document.querySelector(tabName).classList.add("active");
+		}
 	}
 </script>
