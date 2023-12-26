@@ -53,9 +53,9 @@
 
 		<!--the tabs that can be selected for more info-->
 		<div class = "aboutTabs">
-			<p class="tabLinks">Skills</p>
-			<p class="tabLinks activeTab">Experience</p>
-			<p class="tabLinks">Education</p>
+			<p class="tabLinks" onclick="openTab('#skills')">Skills</p>
+			<p class="tabLinks" onclick="openTab('#experience')">Experience</p>
+			<p class="tabLinks" onclick="openTab('#education')">Education</p>
 		</div>
 
 		<!--skills tab-->
@@ -68,7 +68,7 @@
 		</div>
 
 		<!--experience tab-->
-		<div class = "tabContent active" id="experience">
+		<div class = "tabContent" id="experience">
 			<ul>
 				<li><span>DecisionDeskHQ</span><br>Data Entry</li>
 				<li><span>DMV_Serotonin</span><br>Club Promoter<br>Social Media Manager</li>
@@ -105,11 +105,7 @@
 <script>
 	//----------- click on nav bar to scroll func ------------
 	//grab our navbar items that have links to somewhere else in page
-	let navbarElementsArray = [
-    	document.querySelector('.navbar a[href="#about"]'),
-    	document.querySelector('.navbar a[href="#projects"]'),
-    	document.querySelector('.navbar a[href="#contactMe"]') 
-	];
+	let navbarElementsArray = document.querySelectorAll('.navbar a');
 	
 	// Add scroll to elements in navbarArray
 	navbarElementsArray.forEach(addScroll);
@@ -131,5 +127,13 @@
 	}
 
 	//---------make about section texts pop out when clicked-------------
-	var aboutSectionTabLinks = (document.querySelectorAll('.tabLinks'));
+	var tabLinks = document.querySelectorAll('.tabLinks');
+	var tabContents = document.querySelectorAll('.tabContent');
+
+	function openTab(tabName) {
+		tabLinks.forEach(link => link.classList.remove("active"));
+		tabContents.forEach(content => content.classList.remove("active"))
+		event.currentTarget.classList.add("active");
+		document.querySelector(tabName).classList.add("active");
+	}
 </script>

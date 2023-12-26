@@ -99,7 +99,7 @@ html, body {
     position: relative;
 }
 
-#about .aboutTabs .tabLinks.activeTab::after {
+#about .aboutTabs .tabLinks.active::after {
     content:"";
     background-color: white;
     position: absolute;
@@ -119,6 +119,8 @@ html, body {
 #about .tabContent {
     display: none;
 }
+
+
 /*-------end of about section sylization
 ----------------------------------------
 /*project section stylization */
