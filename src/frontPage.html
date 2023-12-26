@@ -54,21 +54,21 @@
 		<!--the tabs that can be selected for more info-->
 		<div class = "aboutTabs">
 			<p class="tabLinks">Skills</p>
-			<p class="tabLinks">Experience</p>
+			<p class="tabLinks activeTab">Experience</p>
 			<p class="tabLinks">Education</p>
 		</div>
 
 		<!--skills tab-->
-		<div class = "tabContent">
+		<div class = "tabContent" id="skills">
 			<ul>
-				<li><span>Java & Java Swing</span><br>Game Development & NLP</li>
-				<li><span>HTML & CSS & JavaScript</span><br>Front-End Web Development</li>
-				<li><span>MongoDB & NoSQL</span><br>Back-End Web Development Using Python</li>
+				<li class="text"><span>Java & Java Swing</span><br>Game Development & NLP</li>
+				<li class="text"><span>HTML & CSS & JavaScript</span><br>Front-End Web Development</li>
+				<li class="text"><span>MongoDB & NoSQL</span><br>Back-End Web Development Using Python</li>
 			</ul>
 		</div>
 
 		<!--experience tab-->
-		<div class = "tabContent">
+		<div class = "tabContent active" id="experience">
 			<ul>
 				<li><span>DecisionDeskHQ</span><br>Data Entry</li>
 				<li><span>DMV_Serotonin</span><br>Club Promoter<br>Social Media Manager</li>
@@ -76,7 +76,7 @@
 		</div>
 
 		<!--education tab-->
-		<div class = "tabContent">
+		<div class = "tabContent" id="education">
 			<ul>
 				<li><span>Northview High School</span><br>Johns Creek, GA<br>2022 Graduate</li>
 				<li><span>George Washington University</span><br>Washington, D.C.
@@ -131,5 +131,5 @@
 	}
 
 	//---------make about section texts pop out when clicked-------------
-
+	var aboutSectionTabLinks = (document.querySelectorAll('.tabLinks'));
 </script>
