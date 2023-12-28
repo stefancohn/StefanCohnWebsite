@@ -35,6 +35,13 @@ html, body {
     font-style: italic;
     color: white;
 }
+
+.socialIcons {
+    display:flex;
+    flex-direction: row;
+    column-gap: 12px;
+    margin-bottom: -15px;
+}
 /*-------------------------------------------
 
 ------- about section stylization -------*/
@@ -156,9 +163,9 @@ html, body {
     margin-left: 0%;
     margin-top: -3%;
     margin-left: 2%;
+    margin-right: 2%;
 
     height: 100%;
-    width: 100%;
 
     overflow: auto;
 
@@ -168,14 +175,28 @@ html, body {
 }
 
 #projects .scrollBar .scrollBarSection {
-    margin-right: 10px;
     height: 40%;
-    margin-top: -10px;
-    overflow: hidden;
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+    row-gap: 0;
 }
 
+#projects .scrollBar .scrollBarSection h1 {
+    align-self: center;
+}
+
+#projects .scrollBar .scrollBarSection p {
+    align-self: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
 /* contact me section stylization */
 #contactMe {
     height: 100%;
