@@ -42,6 +42,11 @@ html, body {
     column-gap: 12px;
     margin-bottom: -15px;
 }
+
+.socialIcons i {
+    color:white;
+    font-size: 20px;
+}
 /*-------------------------------------------
 
 ------- about section stylization -------*/
@@ -155,7 +160,7 @@ html, body {
 #projects .headerContainer h1{
     color: rgb(63, 233, 255);
     text-decoration: underline;
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-left: 1%;
 }
 
@@ -175,7 +180,7 @@ html, body {
 }
 
 #projects .scrollBar .scrollBarSection {
-    height: 40%;
+    height: 30%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -190,12 +195,15 @@ html, body {
 
 #projects .scrollBar .scrollBarSection h1 {
     align-self: center;
+    color:rgb(63, 233, 255);
+    padding-left: 3%
 }
 
 #projects .scrollBar .scrollBarSection p {
     align-self: center;
     padding-left: 3%;
     padding-right: 3%;
+    color:white;
 }
 /* contact me section stylization */
 #contactMe {
