@@ -160,7 +160,7 @@ html, body {
 #projects .headerContainer h1{
     color: rgb(63, 233, 255);
     text-decoration: underline;
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-left: 1%;
 }
 
@@ -197,36 +197,47 @@ html, body {
 
     row-gap: 0;
     opacity: 0.4;
-}
-
-#projects .scrollBar .scrollBarSection.active {
-    opacity: 1;
     transition-duration: 0.3s;
-}
-
-#projects .scrollBar .scrollBarSection:hover {
-
 }
 
 #projects .scrollBar .scrollBarSection h1 {
     color:white;
     font-size: 60px;
+    padding-left: 5%;
+    transition-duration: 0.3s;
 }
 
 #projects .scrollBar .scrollBarSection p {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
     color:white;
     font-size: 20px;
     text-align:right;
+
+    transition-duration: 0.3s;
+}
+
+#projects .scrollBar .scrollBarSection.active {
+    opacity: 1;
+    border-width: 3px;
+    transition-duration: 0.3s;
+}
+
+#projects .scrollBar .scrollBarSection.active p {
+    font-size:25px;
+    padding-left: 0%;
+    padding-right: 0%;
+    transition-duration: 0.3s;
+}
+
+#projects .scrollBar .scrollBarSection.active h1 {
+    font-size:67px;
+    transition-duration: 0.3s;
+    padding-left: 0%;
 }
 
 #projects .scrollBar a {
     text-decoration: none;
-}
-
-#projects .scrollBar a:hover:after {
-    background-color: white;
 }
 /* contact me section stylization */
 #contactMe {

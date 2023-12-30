@@ -62,17 +62,18 @@
 
 		<!--the tabs that can be selected for more info-->
 		<div class = "aboutTabs">
-			<p class="tabLinks" onclick="openTab('#skills')">Skills</p>
+			<p class="tabLinks active" onclick="openTab('#skills')">Skills</p>
 			<p class="tabLinks" onclick="openTab('#experience')">Experience</p>
 			<p class="tabLinks" onclick="openTab('#education')">Education</p>
 		</div>
 
 		<!--skills tab-->
-		<div class = "tabContent" id="skills">
+		<div class = "tabContent active" id="skills">
 			<ul>
 				<li><span>Java, Java Swing, Codename One</span><br>Game Development & NLP</li>
 				<li><span>HTML, CSS, JavaScript</span><br>Front-End Web Development</li>
 				<li><span>MongoDB, NoSQL</span><br>Back-End Web Development Using Python</li>
+				<li><span>Command-Line, Vim, Git, VSCode</span><br>Tools Used for Development</li>
 			</ul>
 		</div>
 
@@ -103,7 +104,7 @@
 
 		<div class="scrollBar">
 
-			<a href="https://github.com/stefancohn/DuckWorld/blob/main/README.md" target="_blank" class="pTooltip">
+			<a href="https://github.com/stefancohn/DuckWorld/blob/main/README.md" target="_blank">
 				<div class="scrollBarSection" onmouseover="revealFully('#duckWorld')" id="duckWorld"
 				onmouseleave="hide('#duckWorld')" style="border-top-width: 2px;">
 					<h1>duck world</h1>
@@ -144,8 +145,6 @@
 					</p>
 				</div>
 			</a>
-
-		</div>
 
 		</div>
 	</section>
