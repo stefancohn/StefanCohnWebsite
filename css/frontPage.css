@@ -180,30 +180,53 @@ html, body {
 }
 
 #projects .scrollBar .scrollBarSection {
-    height: 30%;
+    height: 100%;
+    width: 100%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: white;
+    border-bottom-color: rgb(255, 255, 255, 0.4);
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: white;
+    border-top-color: rgb(255, 255, 255, 0.4);
+    border-radius: 10px;
+
     row-gap: 0;
+    opacity: 0.4;
+}
+
+#projects .scrollBar .scrollBarSection.active {
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+#projects .scrollBar .scrollBarSection:hover {
+
 }
 
 #projects .scrollBar .scrollBarSection h1 {
-    align-self: center;
-    color:rgb(63, 233, 255);
-    padding-left: 3%
+    color:white;
+    font-size: 60px;
 }
 
 #projects .scrollBar .scrollBarSection p {
-    align-self: center;
     padding-left: 3%;
     padding-right: 3%;
     color:white;
+    font-size: 20px;
+    text-align:right;
+}
+
+#projects .scrollBar a {
+    text-decoration: none;
+}
+
+#projects .scrollBar a:hover:after {
+    background-color: white;
 }
 /* contact me section stylization */
 #contactMe {

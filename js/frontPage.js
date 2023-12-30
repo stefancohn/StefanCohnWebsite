@@ -26,6 +26,7 @@ function addScroll(docQ) {
 var tabLinks = document.querySelectorAll('.tabLinks');
 var tabContents = document.querySelectorAll('.tabContent');
 
+//function that changes HTML so that tab is displayed and underlined
 function openTab(tabName) {
     //check if button is already clicked
     var alreadyClicked = (document.querySelector(tabName).classList[1] == "active");
@@ -37,4 +38,19 @@ function openTab(tabName) {
         event.currentTarget.classList.add("active");
         document.querySelector(tabName).classList.add("active");
     }
+}
+
+//---------make project sections turn up when hovered------------
+var projectSections = document.querySelectorAll('.scrollBarSection');
+
+//will make fully opaque
+function revealFully(projectName) {
+    var hoveredProject = document.querySelector(projectName).classList;
+    hoveredProject.add("active");
+}
+
+//reset to default where translucent
+function hide(projectName) {
+    var unhovered = document.querySelector(projectName).classList;
+    unhovered.remove("active");
 }
