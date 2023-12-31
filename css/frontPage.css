@@ -67,8 +67,9 @@ html, body {
 
 #about .aboutContainer .aboutText p{
     color: white;
-    font-size: 2rem;
+    font-size: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
     margin-top: -2%;
+    max-height: 100%;
 }
 
 #about .aboutContainer .aboutText h1 span{
@@ -215,6 +216,20 @@ html, body {
     text-align:right;
 
     transition-duration: 0.3s;
+}
+
+#projects .scrollBar .scrollBarSection:hover #projImg {
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+#projects .scrollBar #projImg {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left:50%;
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
 #projects .scrollBar .scrollBarSection.active {
