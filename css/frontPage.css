@@ -218,17 +218,15 @@ html, body {
     transition-duration: 0.3s;
 }
 
-#projects .scrollBar .scrollBarSection:hover #projImg {
+#projects .scrollBar a:hover #projImg {
     opacity: 1;
-    transition-duration: 0.3s;
+
 }
 
-#projects .scrollBar #projImg {
+#projects #projImg {
     position: absolute;
     width: 200px;
     height: auto;
-    left:50%;
-    transform: translateX(-50%);
     opacity: 0;
 }
 

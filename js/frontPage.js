@@ -53,4 +53,26 @@ function revealFully(projectName) {
 function hide(projectName) {
     var unhovered = document.querySelector(projectName).classList;
     unhovered.remove("active");
+    projImg.style.transitionDuration ="0.3s";
 }
+
+//--------make proj img follow mouse -------
+
+projectSections.forEach(sect => sect.addEventListener('mousemove', function(e) {
+    //get our projImg to edit its css and the left & top of mouse
+    var projImg = document.querySelector('#projImg');
+
+    let left = e.pageX;
+    let top = e.pageY;
+    
+    let rectTop = sect.getBoundingClientRect().top;
+        rectLeft = sect.getBoundingClientRect().left;
+
+    let imgPosX = left;
+        imgPosyAxis = top - rectTop - window.scrollY;
+
+    //add to css
+    projImg.style.left = imgPosX + 10 +'px';
+    projImg.style.top = imgPosyAxis + 30 + 'px';
+    projImg.style.transitionDuration = "0s";
+})) 
