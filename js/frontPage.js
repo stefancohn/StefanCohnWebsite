@@ -54,6 +54,7 @@ function hide(projectName) {
     var unhovered = document.querySelector(projectName).classList;
     var projImg = document.querySelector(projectName).querySelector('#projImg');
     unhovered.remove("active");
+    //readd transDuration for nice looks
     projImg.style.transitionDuration ="0.3s";
 }
 
@@ -62,17 +63,33 @@ projectSections.forEach(sect => sect.addEventListener('mousemove', function(e) {
     //get our projImg to edit its css and the left & top of mouse
     var projImg = sect.querySelector('#projImg');
 
-    let left = e.pageX;
-    let top = e.pageY;
-    
-    var rectTop = sect.getBoundingClientRect().top;
-        rectLeft = sect.getBoundingClientRect().left;
+    //abs pos of cursor in website
+    let left = e.offsetX;
+    //mouse pos rel to container
+    let top = e.offsetY;
 
-    let imgPosX = left;
-        imgPosY = top - window.scrollY - 100;
+    //rel position of element within parent container
+    var rectTop = sect.offsetTop;
+
+    var yPos = top + rectTop;
+
+    //handle edge case where child container comes in contact with mouse
+    if (e.target != sect) {
+        top = e.offsetY + e.target.offsetTop;
+        yPos = top;
+        left = e.offsetX + e.target.offsetLeft;
+    }
+    //edge case if we are at last element)
+    var scrollBarHeight = document.querySelector('.scrollBar').clientHeight;
+    
+    if (e.offsetY + projImg.height > sect.scrollHeight){
+       console.log(scrollBarHeight)
+       console.log(yPos + projImg.height); 
+    }
 
     //add to css
-    projImg.style.left = imgPosX +'px';
-    projImg.style.top = imgPosY + 40 + 'px';
+    projImg.style.left = left + 10 + 'px';
+    projImg.style.top = yPos + 10 + 'px';
+    //remove transDuration so image doesn't lag everywhere
     projImg.style.transitionDuration = "0s";
 })) 
