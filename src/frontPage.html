@@ -72,7 +72,7 @@
 				<ul>
 					<li><span>Java, Java Swing, Codename One</span><br>Game Development & NLP</li>
 					<li><span>HTML, CSS, JavaScript</span><br>Front-End Web Development</li>
-					<li><span>MongoDB, NoSQL</span><br>Back-End Web Development Using Python</li>
+					<li><span>nodeJS</span><br>Back-End Integration</li>
 					<li><span>Command-Line, Vim, Git, VSCode</span><br>Tools Used for Development</li>
 				</ul>
 			</div>
@@ -143,9 +143,9 @@
 				<div class="scrollBarSection" onmouseover="revealFully('#portfolio')" id="portfolio"
 				onmouseleave="hide('#portfolio')" style="margin-top: 1px;">
 					<h1>this website!</h1>
-					<p>advanced html & css<br>
-						javascript implementation <br>
-						backend integration for game
+					<p>backend integration<br>
+						advanced html & css <br>
+						javascript implementation
 					</p>
 					<img src="../assets/portfolioImg.png" id="projImg" style="transition: 0.3s; height: 150px; width: auto">
 				</div>
@@ -161,10 +161,16 @@
 			<h1>contact me</h1>
 		</div>
 
-		<form>
-			<input type="text" name="Name" placeholder="Your Name" ></input>
-			<input type="text" name="Email" placeholder="Your Email" required></input>
-			<input type="text" name="Message" placeholder="Message" required></input>
+		<form class="formContainer">
+
+			<div class="nameInputs">
+				<input type="text" name="fName" id="fName" placeholder="First Name" ></input>
+				<input type="text" name="lName" id="lName" placeholder="Last Name" ></input>
+			</div>
+
+			<input type="text" name="Email" placeholder="Email" autocomplete="on" required></input>
+			<input type="text" name="Message" placeholder="Message" required ></input>
+			<input type="button" value="Submit"></input>
 		</form>
 		
 	</section>
