@@ -79,12 +79,14 @@ projectSections.forEach(sect => sect.addEventListener('mousemove', function(e) {
         yPos = top;
         left = e.offsetX + e.target.offsetLeft;
     }
-    //edge case if we are at last element)
-    var scrollBarHeight = document.querySelector('.scrollBar').clientHeight;
-    
-    if (e.offsetY + projImg.height > sect.scrollHeight){
-       console.log(scrollBarHeight)
-       console.log(yPos + projImg.height); 
+
+    //edge case if we are at last element, we restrict that the image extends the overflow 
+    var lastSection = document.querySelector('#portfolio');
+    //conditional to see if image has no gone into over flow
+    if ((sect == lastSection) && (yPos + projImg.offsetHeight + 20 > lastSection.offsetTop + lastSection.offsetHeight)) {
+        //we then get the difference the image is leaking past the total height of the scrollbar to get its proper pos
+       var diffy = (yPos + projImg.offsetHeight + 10) - (lastSection.offsetTop + lastSection.offsetHeight);
+       yPos = yPos-diffy;
     }
 
     //add to css
