@@ -163,14 +163,22 @@
 
 		<form class="formContainer">
 
+			<label for="fName">Name</label>
 			<div class="nameInputs">
-				<input type="text" name="fName" id="fName" placeholder="First Name" ></input>
-				<input type="text" name="lName" id="lName" placeholder="Last Name" ></input>
+				<input type="text" name="fName" id="fName"></input>
+				<input type="text" name="lName" id="lName"></input>
 			</div>
+			<label for="fName" style="align-self: start;font-size: 14px;margin-top: -10px; opacity: 0.7">
+				First Name</label> 
+			<label for="lName">Last Name*</label>
+			
+			<label for="fName">Email*</label>
+			<input type="text" name="Email" autocomplete="on" required></input>
 
-			<input type="text" name="Email" placeholder="Email" autocomplete="on" required></input>
-			<input type="text" name="Message" placeholder="Message" required ></input>
-			<input type="button" value="Submit"></input>
+			<label for="fName">Message*</label>
+			<input type="text" name="Message" required ></input>
+
+			<input type="button" value="Submit" class="button"></input>
 		</form>
 		
 	</section>

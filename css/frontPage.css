@@ -330,5 +330,31 @@ input[name="fName"], input[name="lName"] {
 }
 
 input[name="Message"] {
-    height: 250px;
+    height: 200px;
+}
+
+label[for="fName"] {
+    align-self: start;
+    color: white;
+    font-size: 22px;
+    margin-bottom: -10px;
+}
+
+label[for="lName"] {
+    color: white;
+    font-size: 14px;
+    opacity: 0.7;
+
+    margin-top: -20px;
+    margin-left: 91px;
+    margin-bottom: 15px;
+}
+
+.button {
+    font-family: inherit;
+    font-size: 20px;
+    color: rgb(174, 83, 30);
+    width: 40%;
+    align-self: start;
+    margin-top: 15px;
 }
