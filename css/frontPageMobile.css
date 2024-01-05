@@ -1,0 +1,437 @@
+/*----------- font size for abt p ---------------*/
+/* Font size for max-width: 1400px */
+@media only screen and (max-width: 1400px) {
+    #about .aboutContainer .aboutText p {
+        font-size: 2rem;
+    }
+}
+
+/* Font size for max-width: 1200px */
+@media only screen and (max-width: 1200px) {
+    #about .aboutContainer .aboutText p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Font size for max-width: 1000px and form optimization*/
+@media only screen and (max-width: 1000px) {
+    #about .aboutContainer .aboutText p {
+        font-size: 1.4rem;
+    }
+    #contactMe {
+        column-gap: 40px;
+    }
+}
+
+/* Font size for max-width: 800px  and form optimization*/
+@media only screen and (max-width: 800px) {
+    #about .aboutContainer .aboutText p {
+        font-size: 1.2rem;
+    }
+    #contactMe {
+        column-gap: 40px;
+    }
+}
+
+
+/*----------mobile optimization------*/
+@media only screen and (max-width: 800px) {
+    body {
+        width: 100vw;
+    }
+    /*------- center container stylization, contains name and navbar --------*/
+    .center {
+        height: 80vh;
+    }
+    .name {
+        /* name text stylization */
+        font-size: 1.5rem;
+        margin: 5px;
+    }
+
+    .navbar a{
+        font-size: 0.7rem;
+    }
+
+    .socialIcons {
+        column-gap: 14px;
+        margin-bottom: -5px;
+    }
+
+    .socialIcons i {
+        color:white;
+        font-size: 14px;
+    }
+    /*-------------------------------------------
+
+------- about section stylization -------*/
+    #about {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*about container row*/
+    #about .aboutContainer{
+        display: flex;
+        flex-direction: column;
+        height:40%;
+        align-items: center;
+        width: 200px;
+    }
+
+    #about .aboutContainer .aboutText{
+        height: 320px;
+        position: relative;
+    }
+
+    #about .aboutContainer .aboutText p{
+        color: white;
+        font-size: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #about .aboutContainer .aboutText h1 span{
+        color: rgb(201, 122, 77);
+        text-decoration: underline;
+        font-size: 2rem;
+    }
+
+    #about .aboutContainer .duckFace {
+        width:140px; 
+        height:100px;
+    }
+
+    #about .line {
+        width: 100%;
+        height: 2px;
+        background-color: rgb(255, 255, 255, 0.15);
+        margin-top: 50px;
+        margin-bottom: -10px;
+    }
+
+    #about .aboutTabs {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-evenly;   
+        width: 100%;
+    }
+
+    #about .aboutTabs .tabLinks {
+        margin-bottom: 0;
+        font-weight: bolder;
+        cursor:pointer;
+        color: rgb(201, 122, 77);
+        font-size: 1rem;
+        position: relative;
+    }
+
+    #about .aboutTabs .tabLinks::after {
+        content:"";
+        position: absolute;
+        width: 0%;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: white;
+        transition: 1s;
+    }
+
+    #about .aboutTabs .tabLinks.active::after {
+        width: 80%;
+    }
+
+    #about .tabContentContainer {
+        display:grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    #about .tabContent {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        opacity: 0;
+        transition: 1s;
+        padding-bottom: 0;
+        width: 100%;
+    }
+
+    #about .tabContent.active {
+        color: white;
+        opacity: 1;
+        transition-duration: 1s;
+    }
+
+    #about .tabContent li span{
+        list-style: circle;
+        color: rgb(189, 109, 64);
+        font-size: 1rem;
+    }
+
+    #about .tabContent li{
+        font-size: 1rem;
+    }
+    /*-------end of about section sylization
+    ----------------------------------------
+    /*project section stylization */
+    #projects {
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #projects .headerContainer h1{
+        color: rgb(201, 122, 77);
+        text-decoration: underline;
+        font-size: 2rem;
+        margin-left: 20px;
+
+    }
+
+    #projects .scrollBar {
+        padding-top: -10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 300px;
+
+        overflow:auto;
+        overflow-x: hidden;
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: rgb(201, 122, 77, 0.4);
+        
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(201, 122, 77, 0.4);
+        border-radius:10px;
+    }
+
+    #projects .scrollBar .scrollBarSection {
+        height: 100%;
+        width: 99.3%;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: rgb(201, 122, 77, 0.4);
+
+        row-gap: 2px;
+        opacity: 0.4;
+        transition-duration: 0.3s;
+    }
+
+    #projects .scrollBar .scrollBarSection h1 {
+        color:white;
+        font-size: 20px;
+        padding-left: 5%;
+        transition-duration: 0.3s;
+    }
+
+    #projects .scrollBar .scrollBarSection p {
+        padding-right: 5%;
+        color:white;
+        font-size: 10px;
+        text-align:right;
+
+        transition-duration: 0.3s;
+    }
+
+    #projects .scrollBar a:hover #projImg {
+        opacity: 1;
+        display:inherit;
+    }
+
+    #projects #projImg {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        opacity: 0;
+        display:none;
+    }
+
+    #projects .scrollBar .scrollBarSection.active {
+        opacity: 1;
+        border-width: 4px;
+        transition-duration: 0.3s;
+        border-color: rgb(201, 122, 77, 1);
+    }
+
+    #projects .scrollBar .scrollBarSection.active p {
+        font-size:25px;
+        padding-left: 0%;
+        padding-right: 5px;
+        transition-duration: 0.3s;
+    }
+
+    #projects .scrollBar .scrollBarSection.active h1 {
+        font-size:67px;
+        transition-duration: 0.3s;
+        padding-left: 0%;
+    }
+
+    #projects .scrollBar a {
+        text-decoration: none;
+    }
+
+    /* contact me section stylization */
+    #contactMe {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 120px;
+        padding-top: 50px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contactMe .textContainer {
+        padding-left: 20px;
+        width:100%;
+        padding-top: 100px;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    #contactMe .textContainer h1{
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        color: rgb(201, 122, 77);
+        text-decoration: underline;
+        font-size: 2rem;
+    }
+
+    .contactGroup {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    #contactMe .textContainer p {
+        color:white;
+        font-size: 1rem;
+    }
+
+    #contactMe .tPhoneNum::before {
+        background-image: url("../assets/teleImg.png");
+        background-size: 13px 13px;
+        display: inline-block;
+        width: 13px; 
+        height: 13px;
+        margin-right: 8px;
+        content:"";
+    }
+
+    #contactMe .tEmail::before {
+        background-image: url("../assets/sendMail.png");
+        background-size: 13px 13px;
+        display: inline-block;
+        width: 13px; 
+        height: 13px;
+        margin-right: 8px;
+        content:"";
+    }
+
+    .cIcons {
+        margin:0px; 
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    .cIcons i{
+        color:white;
+        font-size: 2rem;
+        column-gap: 10px;
+    }
+
+    .button1 {
+        font-family: inherit;
+        font-size: 30px;
+        color: rgb(174, 83, 30);
+        width: 10rem;
+        align-self: start;
+        margin-top: 0px;
+        font-weight: bolder;
+        height: 80px;
+    }
+
+    .formContainer {
+        padding-top: 150px;
+        padding-right: 20px;
+        width: 200px;
+
+        display:flex;
+        align-items: center;
+        flex-direction:column;
+        row-gap: 15px;
+    }
+
+    input {
+        width:100%;
+        height: 30px;
+        padding: 0px;
+
+        border-width: 3px;
+        border-color: white;
+        border-radius: 10px;
+        border-style: solid;
+    }
+
+    .nameInputs {
+        width: 101%;
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        justify-content: space-between;
+    }
+
+    input[name="fName"], input[name="lName"] {
+        width: 50%;
+    }
+
+    input[name="Message"] {
+        height: 200px;
+    }
+
+    label[for="fName"] {
+        align-self: start;
+        color: rgb(201, 122, 77);;
+        font-size: 22px;
+        margin-bottom: -10px;
+    }
+
+    label[for="lName"] {
+        color: white;
+        font-size: 14px;
+        opacity: 0.5;
+
+        margin-top: -20px;
+        margin-left: 91px;
+        margin-bottom: 15px;
+    }
+
+    .button {
+        font-family: inherit;
+        font-size: 22px;
+        color: rgb(174, 83, 30);
+        width: 40%;
+        align-self: start;
+        margin-top: 15px;
+        font-weight: bolder;
+    }
+}
