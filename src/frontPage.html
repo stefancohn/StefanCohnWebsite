@@ -47,9 +47,9 @@
 			<img src="../assets/duckFace.png" class = "duckFace">
 
 			<!--contains about text and header-->
-			<div style="width: 100%; height: 100%;" class = "aboutText"> 
-				<h1 style="margin-top:-1vh;"><span>about me</span></h1>
-				<p>i am an aspiring software engineer from atlanta, ga. currently, i attend george washington university in washington d.c. 
+			<div class = "aboutText"> 
+				<h1 style="margin-top: -10px; margin-bottom: 10px;" id="h"><span>about me</span></h1>
+				<p id="p">i am an aspiring software engineer from atlanta, ga. currently, i attend george washington university in washington d.c. 
 				where i am pursuing a bachelor of science in computer science. asides from coding, my passions are video games, 
 				weight lifting, and sports! i hope one day to become a game dev :D</p>
 			</div>
@@ -159,18 +159,31 @@
 
 		<div class = "textContainer">
 			<h1>contact me</h1>
+			<div class="contactGroup">
+
+				<p class="tEmail" style="margin: 0px">stefancohn@gmail.com</p>
+				<p class="tPhoneNum" style="margin:0px">(770)757-6010</p>
+
+				<div class="cIcons">
+					<a href="https://www.instagram.com/stefancohn/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/in/stefan-cohn/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+					<a href="https://github.com/stefancohn" target="_blank"><i class="fa-brands fa-github"></i></a>
+				</div>
+
+			</div>
+			<input type="button" value="Download CV" class="button1"></input>
 		</div>
 
 		<form class="formContainer">
 
-			<label for="fName">Name</label>
+			<label for="fName">Name*</label>
 			<div class="nameInputs">
 				<input type="text" name="fName" id="fName"></input>
 				<input type="text" name="lName" id="lName"></input>
 			</div>
-			<label for="fName" style="align-self: start;font-size: 14px;margin-top: -10px; opacity: 0.7">
+			<label for="fName" style="align-self: start;font-size: 14px;margin-top: -10px; opacity: 0.5; color:white;">
 				First Name</label> 
-			<label for="lName">Last Name*</label>
+			<label for="lName">Last Name</label>
 			
 			<label for="fName">Email*</label>
 			<input type="text" name="Email" autocomplete="on" required></input>

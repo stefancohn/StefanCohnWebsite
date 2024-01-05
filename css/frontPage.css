@@ -3,7 +3,8 @@ html,body {
     /* no margin, sets the font, and background color*/
     margin: 0;
     font-family: 'Rainy Hearts';
-    background-color: rgb(0, 60, 255);
+    background: linear-gradient(181deg, rgb(4, 3, 65) 15%, rgb(11, 38, 126) 140%);
+    background-color: rgb(2, 0, 97);
 }
 
 body {
@@ -20,14 +21,14 @@ body {
     align-items: center; /*centers horizontally */
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(to bottom, rgb(88, 22, 168), rgb(93, 34, 221));
+
 }
 
 .name {
     /* name text stylization */
     font-size: 4.5rem;
     margin: 10px;
-    color: rgb(137, 224, 255);
+    color: rgb(201, 122, 77);
     font-weight: bold;
 }
 
@@ -54,11 +55,9 @@ body {
 
 ------- about section stylization -------*/
 #about {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 100px;
-    background: linear-gradient(to bottom, rgb(93, 34, 221), rgb(36, 70, 208));
-
 }
 
 /*about container row*/
@@ -71,20 +70,25 @@ body {
 
 #about .aboutContainer .aboutText p{
     color: white;
-    font-size: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    font-size: 2.3rem;
     margin-top: 0;
+    margin-bottom: 0;
+}
 
+#about .aboutContainer .aboutText{
+    height: 320px;
+    position: relative;
 }
 
 #about .aboutContainer .aboutText h1 span{
-    color: rgb(63, 233, 255);
+    color: rgb(201, 122, 77);
     text-decoration: underline;
     font-size: 4rem;
 }
 
 #about .aboutContainer .duckFace {
-    width:40%; 
-    height:90%;
+    width:400px; 
+    height:320px;
 }
 
 #about .line {
@@ -107,7 +111,7 @@ body {
     margin-bottom: 0;
     font-weight: 1000;
     cursor:pointer;
-    color: rgb(63, 233, 255);
+    color: rgb(201, 122, 77);
     font-size: 3.5rem;
     position: relative;
 }
@@ -119,7 +123,7 @@ body {
     left: 0;
     bottom: 0;
     height: 2px;
-    background-color: rgb(63, 233, 255);
+    background-color: white;
     transition: 1s;
 }
 
@@ -147,7 +151,7 @@ body {
 
 #about .tabContent li span{
     list-style: circle;
-    color: rgb(150, 255, 243);
+    color: rgb(189, 109, 64);
     font-size: 3rem;
 }
 
@@ -159,15 +163,14 @@ body {
 ----------------------------------------
 /*project section stylization */
 #projects {
-    padding-left: 20px;
-    padding-right: 20px;
-    background: linear-gradient(to bottom, rgb(36, 70, 208), rgb(35, 74, 203));
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
     flex-direction: column;
 }
 
 #projects .headerContainer h1{
-    color: rgb(63, 233, 255);
+    color: rgb(201, 122, 77);
     text-decoration: underline;
     font-size: 4rem;
     margin-left: 20px;
@@ -189,36 +192,28 @@ body {
 
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: rgb(255, 255, 255, 0.4);
-    border-right-width: 2px;
-    border-right-style: solid;
-    border-right-color: rgb(255, 255, 255, 0.4);
+    border-top-color: rgb(201, 122, 77, 0.4);
+    
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    border-bottom-color: rgb(255, 255, 255, 0.4);
-    border-radius: 10px;
+    border-bottom-color: rgb(201, 122, 77, 0.4);
+    border-radius:10px;
 }
 
 #projects .scrollBar .scrollBarSection {
     height: 100%;
-    width: 100%;
+    width: 99.3%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(255, 255, 255, 0.4);
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: rgb(255, 255, 255, 0.4);
-    border-left-width: 3px;
-    border-left-style: solid;
-    border-left-color: rgb(255, 255, 255, 0.4);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 10px;
+    border-color: rgb(201, 122, 77, 0.4);
 
-    row-gap: 0;
+    row-gap: 2px;
     opacity: 0.4;
     transition-duration: 0.3s;
 }
@@ -231,7 +226,6 @@ body {
 }
 
 #projects .scrollBar .scrollBarSection p {
-    padding-left: 5%;
     padding-right: 5%;
     color:white;
     font-size: 20px;
@@ -255,8 +249,9 @@ body {
 
 #projects .scrollBar .scrollBarSection.active {
     opacity: 1;
-    border-width: 3px;
+    border-width: 4px;
     transition-duration: 0.3s;
+    border-color: rgb(201, 122, 77, 1);
 }
 
 #projects .scrollBar .scrollBarSection.active p {
@@ -278,27 +273,91 @@ body {
 
 /* contact me section stylization */
 #contactMe {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 120px;
+    padding-top: 50px;
 
-    background: linear-gradient(to bottom, rgb(35, 74, 203), rgb(43, 130, 230));
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+}
+
+#contactMe .textContainer {
+    padding-left: 20px;
+    width:100%;
+    padding-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
 }
 
 #contactMe .textContainer h1{
-    margin-top: 0;
-    padding-top: 100px;
-    color: rgb(63, 233, 255);
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: rgb(201, 122, 77);
     text-decoration: underline;
     font-size: 4rem;
 }
 
+.contactGroup {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+#contactMe .textContainer p {
+    color:white;
+    font-size: 2rem;
+}
+
+#contactMe .tPhoneNum::before {
+    background-image: url("../assets/teleImg.png");
+    background-size: 13px 13px;
+    display: inline-block;
+    width: 13px; 
+    height: 13px;
+    margin-right: 8px;
+    content:"";
+}
+
+#contactMe .tEmail::before {
+    background-image: url("../assets/sendMail.png");
+    background-size: 13px 13px;
+    display: inline-block;
+    width: 13px; 
+    height: 13px;
+    margin-right: 8px;
+    content:"";
+}
+
+.cIcons {
+    margin:0px; 
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+.cIcons i{
+    color:white;
+    font-size: 3.2rem;
+    column-gap: 10px;
+}
+
+.button1 {
+    font-family: inherit;
+    font-size: 30px;
+    color: rgb(174, 83, 30);
+    width: 20rem;
+    align-self: start;
+    margin-top: 0px;
+    font-weight: bolder;
+    height: 80px;
+}
+
 .formContainer {
-    padding-top: 200px;
-    width: 45%;
+    padding-top: 150px;
+    padding-right: 20px;
+    width: 100%;
 
     display:flex;
     align-items: center;
@@ -335,7 +394,7 @@ input[name="Message"] {
 
 label[for="fName"] {
     align-self: start;
-    color: white;
+    color: rgb(201, 122, 77);;
     font-size: 22px;
     margin-bottom: -10px;
 }
@@ -343,7 +402,7 @@ label[for="fName"] {
 label[for="lName"] {
     color: white;
     font-size: 14px;
-    opacity: 0.7;
+    opacity: 0.5;
 
     margin-top: -20px;
     margin-left: 91px;
@@ -352,9 +411,15 @@ label[for="lName"] {
 
 .button {
     font-family: inherit;
-    font-size: 20px;
+    font-size: 22px;
     color: rgb(174, 83, 30);
     width: 40%;
     align-self: start;
     margin-top: 15px;
+    font-weight: bolder;
+}
+
+/*----------mobile optimization------*/
+@media only screen and (max-width: 600px) {
+    
 }
