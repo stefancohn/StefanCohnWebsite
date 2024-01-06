@@ -41,7 +41,7 @@
     }
     /*------- center container stylization, contains name and navbar --------*/
     .center {
-        height: 80vh;
+        height: 100vh;
     }
     .name {
         /* name text stylization */
@@ -68,7 +68,7 @@
     #about {
         padding-left: 10%;
         padding-right: 10%;
-        padding-top: 100px;
+        padding-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -80,19 +80,29 @@
         flex-direction: column;
         height:40%;
         align-items: center;
-        width: 200px;
+        width: 100%;
     }
 
     #about .aboutContainer .aboutText{
-        height: 320px;
+        height:auto;
         position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
     #about .aboutContainer .aboutText p{
         color: white;
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-top: 0;
         margin-bottom: 0;
+        text-align: center;
+        width: 80%;
+        align-self: center;
+    }
+
+    #about .aboutContainer .aboutText h1 {
+        padding-top: 20px;
+        text-align: center;
     }
 
     #about .aboutContainer .aboutText h1 span{
@@ -102,16 +112,16 @@
     }
 
     #about .aboutContainer .duckFace {
-        width:140px; 
-        height:100px;
+        width:80%; 
+        height:auto;
     }
 
     #about .line {
         width: 100%;
         height: 2px;
         background-color: rgb(255, 255, 255, 0.15);
-        margin-top: 50px;
-        margin-bottom: -10px;
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
 
     #about .aboutTabs {
@@ -156,7 +166,7 @@
         grid-row-start: 1;
         opacity: 0;
         transition: 1s;
-        padding-bottom: 0;
+        margin-bottom: 0px;
         width: 100%;
     }
 
@@ -181,6 +191,7 @@
     #projects {
         padding-left: 10%;
         padding-right: 10%;
+        margin-top:100px;
         display: flex;
         flex-direction: column;
     }
@@ -197,7 +208,7 @@
         padding-top: -10px;
         margin-left: 20px;
         margin-right: 20px;
-        height: 300px;
+        height: auto; /*control height of scroll!! necessary for overflow*/
 
         overflow:auto;
         overflow-x: hidden;
@@ -287,25 +298,27 @@
         text-decoration: none;
     }
 
-    /* contact me section stylization */
+    /* --------------contact me section stylization----------------- */
     #contactMe {
         padding-left: 10%;
         padding-right: 10%;
         padding-bottom: 120px;
-        padding-top: 50px;
-
-        display: flex;
-        flex-direction: column;
-    }
-
-    #contactMe .textContainer {
-        padding-left: 20px;
-        width:100%;
         padding-top: 100px;
 
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
+        align-items: center;
+    }
+
+    #contactMe .textContainer {
+        width:100%;
+        padding-top: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
     }
 
     #contactMe .textContainer h1{
@@ -319,31 +332,33 @@
     .contactGroup {
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
+        align-items: center;
+        row-gap: 30px;
     }
 
     #contactMe .textContainer p {
         color:white;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        text-align: center;
     }
 
     #contactMe .tPhoneNum::before {
         background-image: url("../assets/teleImg.png");
-        background-size: 13px 13px;
+        background-size: 11px 11px;
         display: inline-block;
-        width: 13px; 
-        height: 13px;
-        margin-right: 8px;
+        width: 11px; 
+        height: 11px;
+        margin-right: 5px;
         content:"";
     }
 
     #contactMe .tEmail::before {
         background-image: url("../assets/sendMail.png");
-        background-size: 13px 13px;
+        background-size: 11px 11px;
         display: inline-block;
-        width: 13px; 
-        height: 13px;
-        margin-right: 8px;
+        width: 11px; 
+        height: 11px;
+        margin-right: 5px;
         content:"";
     }
 
@@ -351,7 +366,7 @@
         margin:0px; 
         display: flex;
         flex-direction: row;
-        column-gap: 20px;
+        column-gap: 15px;
     }
     .cIcons i{
         color:white;
@@ -361,19 +376,21 @@
 
     .button1 {
         font-family: inherit;
-        font-size: 30px;
+        font-size: 1.5rem;
         color: rgb(174, 83, 30);
-        width: 10rem;
-        align-self: start;
-        margin-top: 0px;
+
+        width: 180px;
+        height: 60px;
+
+        margin: 0px;
         font-weight: bolder;
-        height: 80px;
+        align-self: center;
     }
 
     .formContainer {
-        padding-top: 150px;
-        padding-right: 20px;
-        width: 200px;
+        padding-top: 50px;
+        padding-right: 0px;
+        width: 100%;
 
         display:flex;
         align-items: center;
