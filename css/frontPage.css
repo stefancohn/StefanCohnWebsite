@@ -234,9 +234,11 @@ body {
     transition-duration: 0.3s;
 }
 
-#projects .scrollBar a:hover #projImg {
+@media (hover: hover) {
+    #projects .scrollBar a:hover #projImg {
     opacity: 1;
     display:inherit;
+    }
 }
 
 #projects #projImg {

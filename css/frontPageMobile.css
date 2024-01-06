@@ -23,16 +23,6 @@
     }
 }
 
-/* Font size for max-width: 800px  and form optimization*/
-@media only screen and (max-width: 800px) {
-    #about .aboutContainer .aboutText p {
-        font-size: 1.2rem;
-    }
-    #contactMe {
-        column-gap: 40px;
-    }
-}
-
 
 /*----------mobile optimization------*/
 @media only screen and (max-width: 800px) {
@@ -241,7 +231,7 @@
         border-color: rgb(201, 122, 77, 0.4);
 
         row-gap: 2px;
-        opacity: 0.4;
+        opacity: 1;
         transition-duration: 0.3s;
     }
 
@@ -261,16 +251,11 @@
         transition-duration: 0.3s;
     }
 
-    #projects .scrollBar a:hover #projImg {
-        opacity: 1;
-        display:inherit;
-    }
-
     #projects #projImg {
         position: absolute;
         width: 200px;
         height: auto;
-        opacity: 0;
+        opacity: 1;
         display:none;
     }
 

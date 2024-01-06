@@ -91,39 +91,48 @@ function hide(projectName) {
 }
 
 //--------make proj img follow mouse -------
-projectSections.forEach(sect => sect.addEventListener('mousemove', function(e) {
-    //get our projImg to edit its css and the left & top of mouse
-    var projImg = sect.querySelector('#projImg');
+if (isTouchDevice()) {
+    projectSections.forEach(sect => sect.addEventListener('mousemove', function(e) {
+        //get our projImg to edit its css and the left & top of mouse
+        var projImg = sect.querySelector('#projImg');
+    
+        //abs pos of cursor in website
+        let left = e.offsetX;
+        //mouse pos rel to container
+        let top = e.offsetY;
+    
+        //rel position of element within parent container
+        var rectTop = sect.offsetTop;
+    
+        var yPos = top + rectTop;
+    
+        //handle edge case where child container comes in contact with mouse
+        if (e.target != sect) {
+            top = e.offsetY + e.target.offsetTop;
+            yPos = top;
+            left = e.offsetX + e.target.offsetLeft;
+        }
+    
+        //edge case if we are at last element, we restrict that the image extends the overflow 
+        var lastSection = document.querySelector('#portfolio');
+        //conditional to see if image has no gone into over flow
+        if ((sect == lastSection) && (yPos + projImg.offsetHeight + 20 > lastSection.offsetTop + lastSection.offsetHeight)) {
+            //we then get the difference the image is leaking past the total height of the scrollbar to get its proper pos
+           var diffy = (yPos + projImg.offsetHeight + 10) - (lastSection.offsetTop + lastSection.offsetHeight);
+           yPos = yPos-diffy;
+        }
+    
+        //add to css
+        projImg.style.left = left + 10 + 'px';
+        projImg.style.top = yPos + 10 + 'px';
+        //remove transDuration so image doesn't lag everywhere
+        projImg.style.transitionDuration = "0s";
+    })) 
+}
 
-    //abs pos of cursor in website
-    let left = e.offsetX;
-    //mouse pos rel to container
-    let top = e.offsetY;
-
-    //rel position of element within parent container
-    var rectTop = sect.offsetTop;
-
-    var yPos = top + rectTop;
-
-    //handle edge case where child container comes in contact with mouse
-    if (e.target != sect) {
-        top = e.offsetY + e.target.offsetTop;
-        yPos = top;
-        left = e.offsetX + e.target.offsetLeft;
-    }
-
-    //edge case if we are at last element, we restrict that the image extends the overflow 
-    var lastSection = document.querySelector('#portfolio');
-    //conditional to see if image has no gone into over flow
-    if ((sect == lastSection) && (yPos + projImg.offsetHeight + 20 > lastSection.offsetTop + lastSection.offsetHeight)) {
-        //we then get the difference the image is leaking past the total height of the scrollbar to get its proper pos
-       var diffy = (yPos + projImg.offsetHeight + 10) - (lastSection.offsetTop + lastSection.offsetHeight);
-       yPos = yPos-diffy;
-    }
-
-    //add to css
-    projImg.style.left = left + 10 + 'px';
-    projImg.style.top = yPos + 10 + 'px';
-    //remove transDuration so image doesn't lag everywhere
-    projImg.style.transitionDuration = "0s";
-})) 
+//---------funct to detect mobile --------
+function isTouchDevice() {
+    return (('ontouchstart' in window) ||
+       (navigator.maxTouchPoints > 0) ||
+       (navigator.msMaxTouchPoints > 0));
+  }
