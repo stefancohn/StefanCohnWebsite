@@ -367,7 +367,7 @@ body {
     row-gap: 15px;
 }
 
-input {
+input, textarea {
     width:100%;
     height: 30px;
     padding: 0px;
@@ -390,8 +390,9 @@ input[name="fName"], input[name="lName"] {
     width: 50%;
 }
 
-input[name="Message"] {
+textarea {
     height: 200px;
+    vertical-align: top;
 }
 
 label[for="fName"] {
@@ -419,4 +420,15 @@ label[for="lName"] {
     align-self: start;
     margin-top: 15px;
     font-weight: bolder;
+}
+
+input[type=text] {
+    font: inherit;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+textarea[name='Message'] {
+    font-family: inherit;
+    font-size: 20px;
 }

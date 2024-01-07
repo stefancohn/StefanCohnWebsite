@@ -20,39 +20,6 @@ function addScroll(docQ) {
         })
     })
 }
-
-//---------auto resize paragraph element of about section-----------
-/*
-//grab necessary document queries
-var aboutTextContainer = document.querySelector('.aboutText');
-var aboutTextP = aboutTextContainer.querySelector('#p');
-var aboutTextH = aboutTextContainer.querySelector('#h');
-
-//grab containerHeights and fontsize of p
-let aboutTextHeight = aboutTextP.offsetHeight;
-let aboutTextFontSize = parseFloat(window.getComputedStyle(aboutTextP).getPropertyValue('font-size'));
-let aboutTextHeadHeight = aboutTextH.offsetHeight;
-let aboutTextContainerHeight = aboutTextContainer.offsetHeight + aboutTextHeadHeight;
-
-aboutTextResize();
-
-//will call resize every time window is resized
-window.addEventListener('resize', function() {
-    aboutTextHeight = aboutTextP.offsetHeight + aboutTextHeadHeight;
-    aboutTextResize();
-});
-
-//recursive function to adjust fontsize
-function aboutTextResize() {
-    //if there is overflow, we reduce size by 20% and call funct again to check
-    if (aboutTextHeight > aboutTextContainerHeight) {
-        aboutTextP.style.fontSize = ((aboutTextFontSize - 8)/16 + 'rem');
-        //update our aboutTextHeight with new font size
-        aboutTextHeight = aboutTextP.offsetHeight + aboutTextHeadHeight;
-        aboutTextResize();
-    } else {} //else we call nothing, break the recursion
-}
-*/
 //---------make about section texts pop out when clicked-------------
 
 var tabLinks = document.querySelectorAll('.tabLinks');
