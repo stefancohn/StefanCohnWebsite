@@ -73,55 +73,55 @@ function openTab(tabName) {
 }
 
 //---------make project sections turn up when hovered------------
-var projectSections = document.querySelectorAll('.scrollBarSection');
+if (!isTouchDevice()) {
+    var projectSections = document.querySelectorAll('.scrollBarSection');
 
-//will make fully opaque
-function revealFully(projectName) {
-    var hoveredProject = document.querySelector(projectName).classList;
-    hoveredProject.add("active");
-}
+    //will make fully opaque
+    function revealFully(projectName) {
+        var hoveredProject = document.querySelector(projectName).classList;
+        hoveredProject.add("active");
+    }
 
-//reset to default where translucent
-function hide(projectName) {
-    var unhovered = document.querySelector(projectName).classList;
-    var projImg = document.querySelector(projectName).querySelector('#projImg');
-    unhovered.remove("active");
-    //readd transDuration for nice looks
-    projImg.style.transitionDuration ="0.3s";
-}
+    //reset to default where translucent
+    function hide(projectName) {
+        var unhovered = document.querySelector(projectName).classList;
+        var projImg = document.querySelector(projectName).querySelector('#projImg');
+        unhovered.remove("active");
+        //readd transDuration for nice looks
+        projImg.style.transitionDuration ="0.3s";
+    }
 
-//--------make proj img follow mouse -------
-if (isTouchDevice()) {
+    //--------make proj img follow mouse -------
     projectSections.forEach(sect => sect.addEventListener('mousemove', function(e) {
         //get our projImg to edit its css and the left & top of mouse
         var projImg = sect.querySelector('#projImg');
-    
+
         //abs pos of cursor in website
         let left = e.offsetX;
         //mouse pos rel to container
         let top = e.offsetY;
-    
+
         //rel position of element within parent container
         var rectTop = sect.offsetTop;
-    
+
         var yPos = top + rectTop;
-    
+
         //handle edge case where child container comes in contact with mouse
         if (e.target != sect) {
             top = e.offsetY + e.target.offsetTop;
             yPos = top;
             left = e.offsetX + e.target.offsetLeft;
         }
-    
+
         //edge case if we are at last element, we restrict that the image extends the overflow 
         var lastSection = document.querySelector('#portfolio');
         //conditional to see if image has no gone into over flow
         if ((sect == lastSection) && (yPos + projImg.offsetHeight + 20 > lastSection.offsetTop + lastSection.offsetHeight)) {
             //we then get the difference the image is leaking past the total height of the scrollbar to get its proper pos
-           var diffy = (yPos + projImg.offsetHeight + 10) - (lastSection.offsetTop + lastSection.offsetHeight);
-           yPos = yPos-diffy;
+            var diffy = (yPos + projImg.offsetHeight + 10) - (lastSection.offsetTop + lastSection.offsetHeight);
+            yPos = yPos-diffy;
         }
-    
+
         //add to css
         projImg.style.left = left + 10 + 'px';
         projImg.style.top = yPos + 10 + 'px';
