@@ -348,12 +348,17 @@ body {
 .button1 {
     font-family: inherit;
     font-size: 30px;
-    color: rgb(174, 83, 30);
-    width: 20rem;
-    align-self: start;
-    margin-top: 0px;
     font-weight: bolder;
+
+    color: rgb(174, 83, 30);
+
+    width: 20rem;
     height: 80px;
+    margin-top: 0px;
+
+    align-self: start;
+
+    cursor: pointer;
 }
 
 .formContainer {
@@ -420,6 +425,7 @@ label[for="lName"] {
     align-self: start;
     margin-top: 15px;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 input[type=text] {
@@ -431,4 +437,6 @@ input[type=text] {
 textarea[name='Message'] {
     font-family: inherit;
     font-size: 20px;
+    text-indent: 6px;
+    padding-top: 0.4rem;
 }
