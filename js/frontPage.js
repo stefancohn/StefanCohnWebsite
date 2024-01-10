@@ -97,6 +97,49 @@ if (!isTouchDevice()) {
     })) 
 }
 
+//---------from backend integration-------
+//get our necessary elements (form and its children)
+const contactForm = document.querySelector('.formContainer');
+let fName = contactForm.querySelector('#fName');
+let lName = contactForm.querySelector('#lName');
+let email = contactForm.querySelector('#email');
+let message = contactForm.querySelector('#message');
+
+contactForm.addEventListener('submit', async (e) => {
+	//default is to refresh page so disable
+	e.preventDefault();
+
+	let formData = {
+		fName : fName.value,
+		lName : lName.value,
+		email : email.value,
+		message : message.value
+	};
+
+	try {
+		let sendData = await fetch('/', {
+			method: "POST",
+			headers: {
+				"Content-Type" : "application/json",
+			},
+			body: JSON.stringify(formData),
+		});
+
+		const result = await sendData.text();
+    		alert(result);
+
+		//clear up form incase another message
+		fName.value = '';
+		lName.value='';
+		email.value='';
+		message.value='';
+ 	}
+
+	catch (error) {
+		console.log(error);
+  	}
+});
+
 //---------funct to detect mobile --------
 function isTouchDevice() {
     return (('ontouchstart' in window) ||
