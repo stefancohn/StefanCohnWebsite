@@ -117,7 +117,7 @@ contactForm.addEventListener('submit', async (e) => {
 	};
 
 	try {
-		let sendData = await fetch('/', {
+		let sendData = await fetch('https://81us6b7cgf.execute-api.us-east-2.amazonaws.com/default/a', {
 			method: "POST",
 			headers: {
 				"Content-Type" : "application/json",
