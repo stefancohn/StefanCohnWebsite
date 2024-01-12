@@ -267,14 +267,14 @@
     }
 
     #projects .scrollBar .scrollBarSection.active p {
-        font-size:25px;
+        font-size:15px;
         padding-left: 0%;
         padding-right: 5px;
         transition-duration: 0.3s;
     }
 
     #projects .scrollBar .scrollBarSection.active h1 {
-        font-size:67px;
+        font-size:20px;
         transition-duration: 0.3s;
         padding-left: 0%;
     }
