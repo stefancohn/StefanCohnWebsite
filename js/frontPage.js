@@ -114,10 +114,10 @@ contactForm.addEventListener('submit', async (e) => {
 		lName : lName.value,
 		email : email.value,
 		message : message.value
-	};
+	}
 
 	try {
-		let sendData = await fetch('https://81us6b7cgf.execute-api.us-east-2.amazonaws.com/default/a', {
+		let sendData = await fetch('https://he86awsa6g.execute-api.us-east-2.amazonaws.com/dev', {
 			method: "POST",
 			headers: {
 				"Content-Type" : "application/json",
