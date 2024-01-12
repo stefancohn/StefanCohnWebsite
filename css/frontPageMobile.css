@@ -253,8 +253,9 @@
 
     #projects #projImg {
         position: absolute;
-        width: 200px;
-        height: auto;
+        width: 50px;
+        max-width: 200px;
+        max-height: 50px;
         opacity: 1;
         display:none;
     }
