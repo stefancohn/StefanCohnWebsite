@@ -1,7 +1,8 @@
 //----------- click on nav bar to scroll func ------------
 
 //grab our navbar items that have links to somewhere else in page
-let navbarElementsArray = document.querySelectorAll('.navbar a');
+let navbarElementsArray1 = document.querySelectorAll('.navbar a');
+let navbarElementsArray = [navbarElementsArray1[0], navbarElementsArray1[1], navbarElementsArray1[2]]
 // Add scroll to elements in navbarArray
 navbarElementsArray.forEach(addScroll);
 
