@@ -78,7 +78,7 @@ const fsSource = `
     uniform float uTimeFrag;
     uniform vec2 screenSize; // screen resolution.
     void main() {
-        float colorR = abs(cos(uTimeFrag  * 2.0));
+        float colorR = abs(cos(uTimeFrag  * 4.0));
         float pixelCordX = gl_FragCoord.x/screenSize.x;
         float pixelCordY = gl_FragCoord.y/screenSize.y;
         vec2 cord = vec2(pixelCordX, pixelCordY);
@@ -87,8 +87,8 @@ const fsSource = `
         matrix[0] = vec2(cos(timeNew), sin(timeNew));
         matrix[1] = vec2(-sin(timeNew), cos(timeNew));
         cord = matrix * cord;
-        float colorG = abs(sin(cord.x * 30.0));
-        float colorB = abs(cos(cord.y * 30.0));
+        float colorG = abs(sin(cord.x * 7.0));
+        float colorB = abs(cos(cord.y * 5.0));
         gl_FragColor = vec4(colorR, colorG, colorB, 1.0);  // Red color
     }
 `;
