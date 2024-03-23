@@ -23,10 +23,10 @@ scene.add(ambientLight)
 
 // load different color textures
 const material = new THREE.MeshPhongMaterial()
-const texture = new THREE.TextureLoader().load("earth_normalmap.jpg");
+const texture = new THREE.TextureLoader().load("../../js/visualizer/textures/earth_normalmap.jpg");
 material.map = texture
 
-const bumpTexture = new THREE.TextureLoader().load('earth_bumpmap.jpg')
+const bumpTexture = new THREE.TextureLoader().load('../../js/visualizer/textures/earth_bumpmap.jpg')
 material.bumpMap = bumpTexture
 material.bumpScale = 0.015
 
