@@ -56,8 +56,8 @@ class particleSystem {
 		this.m_nParticles = nParticles;
 
 		//this.BrownianWalkInit();
-		//this.gravityFallInit();
-		this.gravityAttractInit();
+		this.gravityFallInit();
+		//this.gravityAttractInit();
 		// depthTest: false,
 		const sprite = new THREE.TextureLoader().load('../../js/visualizer/textures/disc.png');
 		sprite.colorSpace = THREE.SRGBColorSpace;
@@ -78,8 +78,8 @@ class particleSystem {
 	// update particles.
 	update() {
 		//this.BrownianWalk();
-		//this.gravityFall();
-		this.gravityAttract();
+		this.gravityFall();
+		//this.gravityAttract();
 		this.m_allParticles.geometry.attributes.position.needsUpdate = true;
 		this.m_allParticles.geometry.attributes.color.needsUpdate = true;
 	}
