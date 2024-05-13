@@ -1,0 +1,16 @@
+.links {
+    align-self: center;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.links a {
+    color: blue;
+}
+
+body {
+    background-color: black;
+}
