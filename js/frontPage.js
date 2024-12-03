@@ -82,7 +82,7 @@ if (!isTouchDevice()) {
         }
 
         //edge case if we are at last element, we restrict that the image extends the overflow 
-        var lastSection = document.querySelector('#three');
+        var lastSection = document.querySelector('#ballboom');
         //conditional to see if image has no gone into over flow
         if ((sect == lastSection) && (yPos + projImg.offsetHeight + 20 > lastSection.offsetTop + lastSection.offsetHeight)) {
             //we then get the difference the image is leaking past the total height of the scrollbar to get its proper pos

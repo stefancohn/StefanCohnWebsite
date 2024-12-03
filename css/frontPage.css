@@ -147,6 +147,7 @@ body {
     color: white;
     opacity: 1;
     transition-duration: 1s;
+    overflow: auto;
 }
 
 #about .tabContent li span{
