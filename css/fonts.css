@@ -8,3 +8,8 @@
     font-family : 'Rainy Hearts';
     src: url(../assets/rainyhearts.ttf) format('truetype')
 }
+
+@font-face {
+    font-family : 'BBall Boom';
+    src: url(../assets/score.ttf) format('truetype')
+}
